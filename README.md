@@ -12,7 +12,7 @@ Fork this repository before cloning
 - The pawn should move forward from its starting location anywhere in the map by 10 units at a time until it 'hits' something (until an object is less than 15 units away from it in its forward direction), then rotate left or right a little (randomly, between 5 and 25 degrees), and try moving forward again, repeating the process indefinitely
 - The pawn's starting location should be 10 units above the floor; you don't have to enforce this in code, just drop it in and move it up by 10 units
 - Rotating and moving forward can happen discretely and don't need to be animated (i.e. move 10 units or rotate n degrees all at once, with every frame representing a new rotation or position)
-- After every move forward, drop a simple 1-unit sphere (feel free to use the standard UE4 sphere mesh scaled to size) in its current location into the scene to show where the robot has been, and wait for one second before proceeding to the next move. Where and how this is implemented (C++, BP node graph) is up to you.
+- In between moves, wait for one second before proceeding to the next move. Where and how this is implemented (C++, BP node graph) is up to you.
 - You can assume that the starting Z location of the pawn will always be its Z location (no downward line checks and floor placement necessary)
 
 ### Have the robot take pictures and output information
