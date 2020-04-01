@@ -5,7 +5,9 @@ This project currently runs on UE4 4.24.3
 ## Instructions
 ### Setup
 
-Fork this repository before cloning
+Fork this repository before cloning.
+Once forked, feel free to submit to it as much as you'd like.
+When completed, send us an email and a link to your fork of the repository.
 
 ### Create a robot that randomly navigates an environment.
 
