@@ -29,4 +29,4 @@ If you create your own, ensure it has a variety of objects in it.
 
 A game mode has also been created and set as the default in the project, which can be found at `AIReverie/BP_AIReverie_GameMode`
 
-If you have any questions at all please email whoever sent this to you. 
+If you have any questions at all please email whoever sent this to you. We are more than happy to answer any questions.
