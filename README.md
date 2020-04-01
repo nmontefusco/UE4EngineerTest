@@ -17,7 +17,7 @@ Fork this repository before cloning
 
 ### Have the robot take pictures and output information
 
-- After every time to pawn moves forward or rotates, take a screenshot and save it to the saved folder.
+- After every time the pawn moves forward or rotates, take a screenshot and save it to the saved folder.
 - In addition to the screenshot, output a text file with a list of the actor names that are in the viewport when the image is taken
 
 The collision check against objects and rotation of the pawn should happen on the C++ side. The easiest way to set this up would likely be a C++ Blueprint with the C++ functionality handling line traces for obstruction checks and choice of new direction called from the blueprint's node graph during tick. Please use UE4 conventions and frameworks for C++ implementation.
