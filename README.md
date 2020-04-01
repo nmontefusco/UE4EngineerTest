@@ -26,7 +26,7 @@ The collision check against objects and rotation of the pawn should happen on th
 Online research, UE4 documentation, Stackoverflow, etc., are all fair game. Google to your heart's content :)
 
 When hitting Play In Editor, the pawn should start navigating and dropping spheres into the environment.
-We have create a map in the project called `AIReverieMap.umap` in the `AIReverie` folder. Feel free to use that map or create your own.
+We have created a map in the project called `AIReverieMap.umap` in the `AIReverie` folder. Feel free to use that map or create your own.
 If you create your own, ensure it has a variety of objects in it.
 
 A game mode has also been created and set as the default in the project, which can be found at `AIReverie/BP_AIReverie_GameMode`
