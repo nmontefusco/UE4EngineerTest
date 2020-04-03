@@ -28,9 +28,12 @@ protected:
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
 	class UFloatingPawnMovement* MovementComponent;
 
+	//Takes screenShot of the Viewport, and logs to Screenshot folder in Project Directory.
 	void TakePhoto();
 
-	void GetAllActors();
+	//Logs Actors in the Level to the Log folder.
+	void LogAllActors();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

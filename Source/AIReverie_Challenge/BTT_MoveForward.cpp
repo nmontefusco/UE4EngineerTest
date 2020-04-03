@@ -11,12 +11,17 @@ UBTT_MoveForward::UBTT_MoveForward(const FObjectInitializer& ObjectInitializer)
 	bNotifyTick = true;
 }
 
-/*
+
 void UBTT_MoveForward::TickTask(UBehaviorTreeComponent & OwnerComp, uint8 * NodeMemory, float DeltaSeconds)
 {
-	
+	ARobotController* RobotController = Cast<ARobotController>(OwnerComp.GetAIOwner());
+	ARobot* RobotPawn = Cast<ARobot>(RobotController->GetPawn());
+	if (RobotPawn)
+	{
+		RobotPawn->MoveForward();
+	}
 }
-*/
+
 
 
 EBTNodeResult::Type UBTT_MoveForward::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
@@ -27,7 +32,8 @@ EBTNodeResult::Type UBTT_MoveForward::ExecuteTask(UBehaviorTreeComponent& OwnerC
 	if (RobotPawn)
 	{
 		RobotPawn->MoveForward();
-		return EBTNodeResult::Succeeded;
+		//In order to keep the Robot moving forward smoothly, instead of erratic 1 unit at a time.
+		return EBTNodeResult::InProgress;
 	}
 	return EBTNodeResult::Failed;
 }

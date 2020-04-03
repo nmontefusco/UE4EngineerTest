@@ -7,7 +7,7 @@
 #include "RobotController.generated.h"
 
 /**
- * 
+   The A.I Controller for our Robot Pawn
  */
 UCLASS()
 class AIREVERIE_CHALLENGE_API ARobotController : public AAIController

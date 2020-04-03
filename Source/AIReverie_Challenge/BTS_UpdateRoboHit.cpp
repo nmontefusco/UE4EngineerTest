@@ -23,17 +23,13 @@ void UBTS_UpdateRoboHit::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Node
 		return;
 	}
 
-	ARobotController* RobotController = Cast<ARobotController>(OwnerComp.GetAIOwner());
+	AAIController* AIController = OwnerComp.GetAIOwner();
+	ARobotController* RobotController = Cast<ARobotController>(AIController);
 	ARobot*  RobotPawn = Cast<ARobot>(RobotController->GetPawn());
 
-	if (RobotPawn->bHitSomething == true)
-	{
-		BlackboardComp->SetValueAsBool(bHitSomething.SelectedKeyName, true);
-	}
-	else
-	{
-		BlackboardComp->SetValueAsBool(bHitSomething.SelectedKeyName, false);
-	}
+	//Set the Blackboard key value to our  Robot Pawn's bHitSomething value
+	BlackboardComp->SetValueAsBool(bHitSomething.SelectedKeyName, RobotPawn->bHitSomething);
+
 	
 	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 }

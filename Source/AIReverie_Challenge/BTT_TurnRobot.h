@@ -6,8 +6,8 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTT_TurnRobot.generated.h"
 
-/**
- * 
+/*
+   Calls the Turn logic declared in  ARobot::Turn()
  */
 UCLASS()
 class AIREVERIE_CHALLENGE_API UBTT_TurnRobot : public UBTTaskNode

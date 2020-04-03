@@ -6,6 +6,11 @@
 #include "BehaviorTree/BTService.h"
 #include "BTS_UpdateRoboHit.generated.h"
 
+/*
+   Service which drives check behavior to see whether our Robot has hit something or not.
+*/
+
+
 UCLASS()
 class AIREVERIE_CHALLENGE_API UBTS_UpdateRoboHit : public UBTService
 {
@@ -18,8 +23,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	FBlackboardKeySelector bHitSomething;
 
-private:
-	bool bServiceHitPlayer;
 
 protected:
 
